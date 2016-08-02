@@ -41,14 +41,11 @@ module Bank
     config.autoload_paths << Rails.root.join('lib')
 
     # Needs to be false on Heroku
-    config.serve_static_files = false
-    config.static_cache_control = "public, max-age=31536000"
+    config.public_file_server.enabled = false
+    # config.static_cache_control = "public, max-age=31536000"
 
     # Add the fonts path
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts', 'vendor')
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
 
     # Precompile additional assets
     config.assets.precompile += %w( *.svg *.eot *.woff *.ttf *.png *.jpg *.jpeg *.gif)

@@ -50,7 +50,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Warden::Test::Helpers
   config.include Devise::TestHelpers, type: :controller
-  config.extend ControllerMacros,     type: :controller
+  # config.extend ControllerMacros,     type: :controller
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 end
