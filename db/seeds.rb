@@ -2,8 +2,8 @@ puts 'SETTING UP DEFAULT USER LOGIN'
 
 user = User.create(
   email: 'malachai@thiesa.com',
-  password: 'Ethan2012',
-  password_confirmation: 'Ethan2012',
+  password: 'Password1',
+  password_confirmation: 'Password1',
   confirmed_at: Time.now,
 )
 # user.save!(validate: false)
