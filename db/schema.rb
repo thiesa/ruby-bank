@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160703052716) do
+ActiveRecord::Schema.define(version: 20160802175649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pgcrypto"
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
@@ -23,6 +24,22 @@ ActiveRecord::Schema.define(version: 20160703052716) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
     t.index ["name"], name: "index_roles_on_name", using: :btree
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.uuid     "identifier"
+    t.float    "geo",                                   array: true
+    t.string   "status"
+    t.text     "desc"
+    t.integer  "pain_type"
+    t.integer  "transaction_amount_cents"
+    t.integer  "fee_amount_cents"
+    t.string   "sender_account_number"
+    t.string   "sender_bank_number"
+    t.string   "receiver_account_number"
+    t.string   "receiver_bank_number"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "users", force: :cascade do |t|
