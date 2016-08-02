@@ -1,24 +1,8 @@
-# README
+# ruby-bank
+Modern banking infrastructure using Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Inspired by
+[Inspired by](https://github.com/BVNK/bank)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Banking infrastructure built using Rails
+_Core banking with Ruby and Rails_
